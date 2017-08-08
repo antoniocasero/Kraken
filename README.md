@@ -19,11 +19,58 @@ Kraken Swift was built by [Antonio Casero](@acaserop)
 
 ## Installation
 
-If you use Carthage to manage your dependencies, simply add Kraken to your `Cartfile`:
 
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
 ```
+
+To integrate Kraken into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
 github "Kraken" ~> 1.0
 ```
+
+Run `carthage update` to build the framework and drag the built `Kraken.framework` into your Xcode project.
+
+### Manually
+
+If you prefer not to use any of the aforementioned dependency managers, you can integrate Kraken into your project manually.
+
+#### Embedded Framework
+
+- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+
+  ```bash
+  $ git init
+  ```
+
+- Add Kraken as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+  ```bash
+  $ git submodule add https://github.com/antoniocasero/Kraken.git
+  ```
+
+- Open the new `Kraken` folder, and drag the `Kraken.xcodeproj` into the Project Navigator of your application's Xcode project.
+
+    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+
+- Select the `Kraken.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- Select the top `Kraken.framework` 
+- And that's it!
+
+  > The `Kraken.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+---
 
 ## Usage
 
@@ -33,9 +80,10 @@ Create a Kraken client using your credentials
 
 let credentials = Kraken.Credentials(key: "0Q/eOVRtyfg+WbIuLjKJ.....",
                                      secret: "EVFTYSinNiC89V.....")
+
 let kraken = Kraken(credentials: credentials)
 
-kraken.serverTime(completion: { let _ = $0.map{ print($0) } } #=> 1393056191
+kraken.serverTime(completion: { let _ = $0.map{ print($0) } } // 1393056191
 
 ```
 
@@ -50,8 +98,8 @@ This functionality is provided by Kraken to to aid in approximating the skew tim
  kraken.serverTime { result in
     switch result {
          case .success(let serverTime):
-                serverTime["unixtime"] #=> 1393056191
-                serverTime["rfc1123"] #=> "Sat, 22 Feb 2014 08:28:04 GMT"
+                serverTime["unixtime"] // 1393056191
+                serverTime["rfc1123"] // "Sat, 22 Feb 2014 08:28:04 GMT"
          case .failure(let error): print(error)
         }
  }
@@ -194,7 +242,7 @@ kraken.queryTrades(ids: assetPairs completion: { ... })
 
 There are 4 required parameters for buying an order. The example below illustrates the most basic order. Please see the [Kraken documentation](https://www.kraken.com/help/api#add-standard-order) for the parameters required for more advanced order types.
 ```swift
-# buying 0.01 XBT (bitcoin) for XRP (ripple) at market price
+// buying 0.01 XBT (bitcoin) for XRP (ripple) at market price
 let opts = [
   "pair": "XBTXRP",
   "type": "buy",
