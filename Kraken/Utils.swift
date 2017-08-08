@@ -47,8 +47,8 @@ public enum Result<Value> {
 
 }
 
-extension Sequence where Element: Equatable {
-    func contains(array: [Element]) -> Bool {
+extension Sequence where Iterator.Element: Equatable {
+    func contains(array: [Iterator.Element]) -> Bool {
         for item in array {
             if !self.contains(item) {
                 return false

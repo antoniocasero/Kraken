@@ -19,13 +19,11 @@ Kraken Swift was built by [Antonio Casero](@acaserop)
 
 ## Installation
 
-Using cocoapods
+If you use Carthage to manage your dependencies, simply add Kraken to your `Cartfile`:
 
-pod krakenClient
-
-or using swft package manager
-
-
+```
+github "Kraken" ~> 1.0
+```
 
 ## Usage
 

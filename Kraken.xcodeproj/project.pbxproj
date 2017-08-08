@@ -22,8 +22,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0A6177B71F2934F7000554B1 /* Kraken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6177AD1F2934F7000554B1 /* Kraken.framework */; };
-		0A6177BC1F2934F7000554B1 /* KrakenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6177BB1F2934F7000554B1 /* KrakenTests.swift */; };
 		0A6177BE1F2934F7000554B1 /* Kraken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6177B01F2934F7000554B1 /* Kraken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A6177D91F2935DD000554B1 /* Kraken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6177C71F29350C000554B1 /* Kraken.swift */; };
 		0A6177DA1F2935DF000554B1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6177C81F29350C000554B1 /* Network.swift */; };
@@ -34,14 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A6177B81F2934F7000554B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A6177A41F2934F7000554B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A6177AC1F2934F7000554B1;
-			remoteInfo = Kraken;
-		};
-		0AE0B9121F2E202B00678F96 /* PBXContainerItemProxy */ = {
+		0AC741931F3A470E000CC663 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A6177A41F2934F7000554B1 /* Project object */;
 			proxyType = 1;
@@ -54,7 +45,6 @@
 		0A6177AD1F2934F7000554B1 /* Kraken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kraken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6177B01F2934F7000554B1 /* Kraken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kraken.h; sourceTree = "<group>"; };
 		0A6177B11F2934F7000554B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A6177B61F2934F7000554B1 /* KrakenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrakenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6177BB1F2934F7000554B1 /* KrakenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KrakenTests.swift; sourceTree = "<group>"; };
 		0A6177BD1F2934F7000554B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6177C71F29350C000554B1 /* Kraken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kraken.swift; sourceTree = "<group>"; };
@@ -69,14 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A6177B31F2934F7000554B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A6177B71F2934F7000554B1 /* Kraken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				0A6177AD1F2934F7000554B1 /* Kraken.framework */,
-				0A6177B61F2934F7000554B1 /* KrakenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,30 +141,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				0AE0B9131F2E202B00678F96 /* PBXTargetDependency */,
+				0AC741941F3A470E000CC663 /* PBXTargetDependency */,
 			);
 			name = Kraken;
 			productName = Kraken;
 			productReference = 0A6177AD1F2934F7000554B1 /* Kraken.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		0A6177B51F2934F7000554B1 /* KrakenTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6177C41F2934F7000554B1 /* Build configuration list for PBXNativeTarget "KrakenTests" */;
-			buildPhases = (
-				0A6177B21F2934F7000554B1 /* Sources */,
-				0A6177B31F2934F7000554B1 /* Frameworks */,
-				0A6177B41F2934F7000554B1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A6177B91F2934F7000554B1 /* PBXTargetDependency */,
-			);
-			name = KrakenTests;
-			productName = KrakenTests;
-			productReference = 0A6177B61F2934F7000554B1 /* KrakenTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -198,9 +161,6 @@
 					0A6177AC1F2934F7000554B1 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
-					};
-					0A6177B51F2934F7000554B1 = {
-						CreatedOnToolsVersion = 9.0;
 					};
 					0AE0B90D1F2E1FE400678F96 = {
 						CreatedOnToolsVersion = 9.0;
@@ -220,7 +180,6 @@
 			projectRoot = "";
 			targets = (
 				0A6177AC1F2934F7000554B1 /* Kraken */,
-				0A6177B51F2934F7000554B1 /* KrakenTests */,
 				0AE0B90D1F2E1FE400678F96 /* CommonCryptoModuleMap */,
 			);
 		};
@@ -228,13 +187,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		0A6177AB1F2934F7000554B1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A6177B41F2934F7000554B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,26 +236,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A6177B21F2934F7000554B1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A6177BC1F2934F7000554B1 /* KrakenTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A6177B91F2934F7000554B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A6177AC1F2934F7000554B1 /* Kraken */;
-			targetProxy = 0A6177B81F2934F7000554B1 /* PBXContainerItemProxy */;
-		};
-		0AE0B9131F2E202B00678F96 /* PBXTargetDependency */ = {
+		0AC741941F3A470E000CC663 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0AE0B90D1F2E1FE400678F96 /* CommonCryptoModuleMap */;
-			targetProxy = 0AE0B9121F2E202B00678F96 /* PBXContainerItemProxy */;
+			targetProxy = 0AC741931F3A470E000CC663 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,13 +376,14 @@
 				);
 				INFOPLIST_FILE = Kraken/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uttopia.Kraken;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -464,40 +404,13 @@
 				);
 				INFOPLIST_FILE = Kraken/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uttopia.Kraken;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0A6177C51F2934F7000554B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9HX8L3BY3M;
-				INFOPLIST_FILE = KrakenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uttopia.KrakenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0A6177C61F2934F7000554B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9HX8L3BY3M;
-				INFOPLIST_FILE = KrakenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uttopia.KrakenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -506,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9HX8L3BY3M;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -514,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9HX8L3BY3M;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -535,15 +450,6 @@
 			buildConfigurations = (
 				0A6177C21F2934F7000554B1 /* Debug */,
 				0A6177C31F2934F7000554B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A6177C41F2934F7000554B1 /* Build configuration list for PBXNativeTarget "KrakenTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A6177C51F2934F7000554B1 /* Debug */,
-				0A6177C61F2934F7000554B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
