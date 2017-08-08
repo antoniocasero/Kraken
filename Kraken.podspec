@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
   s.authors      = { "Antonio Casero" => "anto.casero@gmail.com"}
   s.platform = :ios, :osx, :tvos
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
+  s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/antoniocasero/Kraken.git", :tag => s.version.to_s }
-  s.source_files = 'Kraken/**/*''
+  s.source_files = 'Kraken/*.*''
 end
