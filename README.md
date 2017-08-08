@@ -87,7 +87,7 @@ Get market depth information for given asset pairs
 
 ```swift
 
-depth_data = kraken.order_book('LTCXRP')
+depth_data = kraken.order_book('LTCXRP', completion: { ... })
 ```
 
 #### Trades
@@ -95,7 +95,7 @@ depth_data = kraken.order_book('LTCXRP')
 Get recent trades
 
 ```swift
-trades = kraken.trades('LTCXRP')
+trades = kraken.trades('LTCXRP', completion: { ... })
 ```
 
 #### Spread
@@ -103,7 +103,7 @@ trades = kraken.trades('LTCXRP')
 Get spread data for a given asset pair
 
 ```swift
-spread = kraken.spread('LTCXRP')
+spread = kraken.spread('LTCXRP', completion: { ... })
 ```
 
 ### Private Data Methods
@@ -197,12 +197,12 @@ kraken.queryTrades(ids: assetPairs completion: { ... })
 There are 4 required parameters for buying an order. The example below illustrates the most basic order. Please see the [Kraken documentation](https://www.kraken.com/help/api#add-standard-order) for the parameters required for more advanced order types.
 ```swift
 # buying 0.01 XBT (bitcoin) for XRP (ripple) at market price
-opts = {
+let opts = [
   "pair": "XBTXRP",
   "type": "buy",
   "ordertype": "market",
   "volume": "0.01"
-}
+]
 
 kraken.addOrder(options:opts completion: { ... })
 
