@@ -34,7 +34,7 @@ $ brew install carthage
 To integrate Kraken into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Kraken" ~> 1.0
+github "antoniocasero/Kraken" ~> 1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `Kraken.framework` into your Xcode project.
