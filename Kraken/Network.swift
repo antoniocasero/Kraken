@@ -31,14 +31,6 @@ public struct Network {
         urlComponents.scheme = scheme
         urlComponents.host = krakenUrl
         urlComponents.path =  "/" + version + "/" + type.rawValue + "/" + method
-
-        var parameters: [URLQueryItem] = []
-        for (key, value) in params {
-            let newParameter = URLQueryItem(name: key, value: value)
-            parameters.append(newParameter)
-        }
-
-        urlComponents.queryItems = parameters
         return urlComponents.url
     }
 
